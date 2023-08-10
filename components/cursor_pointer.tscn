@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://v8nndbag44a7"]
+
+[ext_resource type="Texture2D" uid="uid://dumh6nepxo1w3" path="res://assets/sprites/crosshair.png" id="1_i3ekl"]
+[ext_resource type="Script" path="res://assets/scripts/cursor_pointer.gd" id="1_tnq6r"]
+
+[node name="CursorPointer" type="Node2D"]
+script = ExtResource("1_tnq6r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i3ekl")

@@ -1,0 +1,248 @@
+[gd_scene load_steps=59 format=3 uid="uid://dchifpx8gl4c0"]
+
+[ext_resource type="Texture2D" uid="uid://cuchny6eltsu3" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_0.png" id="1_vajvf"]
+[ext_resource type="Texture2D" uid="uid://bx0l0t122qfx6" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_1.png" id="2_5txbb"]
+[ext_resource type="Texture2D" uid="uid://c4h4qvq1vl7hi" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_2.png" id="3_28768"]
+[ext_resource type="Texture2D" uid="uid://7sk7gupx5glw" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_3.png" id="4_ugvcn"]
+[ext_resource type="Texture2D" uid="uid://b8lbfomhd1x5a" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_4.png" id="5_qeq3k"]
+[ext_resource type="Texture2D" uid="uid://dh6f80obwqq8n" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_5.png" id="6_5iu7r"]
+[ext_resource type="Texture2D" uid="uid://c7m88avhg2gtg" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_6.png" id="7_fesp5"]
+[ext_resource type="Texture2D" uid="uid://jiafcj0cptaa" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_7.png" id="8_cku0l"]
+[ext_resource type="Texture2D" uid="uid://c2w86saelh1y7" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_8.png" id="9_i7ith"]
+[ext_resource type="Texture2D" uid="uid://fyunbwgxmqu" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_9.png" id="10_2maa5"]
+[ext_resource type="Texture2D" uid="uid://dqqjx4qkppepg" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_10.png" id="11_jxq37"]
+[ext_resource type="Texture2D" uid="uid://dibcugjgergfe" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_11.png" id="12_qf7fu"]
+[ext_resource type="Texture2D" uid="uid://cmxk6uuoog0gq" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_12.png" id="13_xrp3u"]
+[ext_resource type="Texture2D" uid="uid://vunyrw6ukhyv" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_13.png" id="14_eo5db"]
+[ext_resource type="Texture2D" uid="uid://c0bk7ywnhryxr" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_14.png" id="15_a33ko"]
+[ext_resource type="Texture2D" uid="uid://tmnln8gj6sbl" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_15.png" id="16_t3de4"]
+[ext_resource type="Texture2D" uid="uid://c3hf5h42xlfmj" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_16.png" id="17_yu381"]
+[ext_resource type="Texture2D" uid="uid://bvjsj6bqiedni" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_17.png" id="18_5qye2"]
+[ext_resource type="Texture2D" uid="uid://fttnvmt0nu5t" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_18.png" id="19_4yiwq"]
+[ext_resource type="Texture2D" uid="uid://bjw3dca8tbmw7" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_19.png" id="20_vsbux"]
+[ext_resource type="Texture2D" uid="uid://bpdmg0s4rf5or" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_20.png" id="21_skje5"]
+[ext_resource type="Texture2D" uid="uid://c2klv6xdilr08" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_21.png" id="22_uau4g"]
+[ext_resource type="Texture2D" uid="uid://ji5aaufc34n2" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_22.png" id="23_l4ctp"]
+[ext_resource type="Texture2D" uid="uid://cnte5a7s7a5ds" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_23.png" id="24_pljbf"]
+[ext_resource type="Texture2D" uid="uid://celpn04m3wn6j" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_24.png" id="25_eui7h"]
+[ext_resource type="Texture2D" uid="uid://b66fjldoml8d3" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_25.png" id="26_xhqub"]
+[ext_resource type="Texture2D" uid="uid://b8qtj7cfk3wdx" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_26.png" id="27_vy3ib"]
+[ext_resource type="Texture2D" uid="uid://cw3cmgbsu5672" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_27.png" id="28_t2lvg"]
+[ext_resource type="Texture2D" uid="uid://dywtcq8gcsem2" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_28.png" id="29_eux3u"]
+[ext_resource type="Texture2D" uid="uid://c8oc5mrb4klrc" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_29.png" id="30_7iulb"]
+[ext_resource type="Texture2D" uid="uid://br5ljye3f6fen" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_30.png" id="31_wbx4s"]
+[ext_resource type="Texture2D" uid="uid://qchvx47ewkip" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_31.png" id="32_gf7ut"]
+[ext_resource type="Texture2D" uid="uid://dv1xnxcvj8dmu" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_32.png" id="33_ne66n"]
+[ext_resource type="Texture2D" uid="uid://bgtwgnsoultwm" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_33.png" id="34_boiyx"]
+[ext_resource type="Texture2D" uid="uid://xvucber83rwl" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_34.png" id="35_jwpas"]
+[ext_resource type="Texture2D" uid="uid://djbrrqx3ux8b5" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_35.png" id="36_pu6xy"]
+[ext_resource type="Texture2D" uid="uid://b135cow1x12a3" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_36.png" id="37_bkg2w"]
+[ext_resource type="Texture2D" uid="uid://c22cmm4rfvt3m" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_37.png" id="38_sxsa7"]
+[ext_resource type="Texture2D" uid="uid://qr7k2xk2uce6" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_38.png" id="39_f5mcg"]
+[ext_resource type="Texture2D" uid="uid://by0aq6t28nxe6" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_39.png" id="40_sxgrb"]
+[ext_resource type="Texture2D" uid="uid://d0qbg6ix2x0jm" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_40.png" id="41_4fnh1"]
+[ext_resource type="Texture2D" uid="uid://bcmpxr64xkamv" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_41.png" id="42_ijtli"]
+[ext_resource type="Texture2D" uid="uid://hhoq37cm3lxs" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_42.png" id="43_iihuy"]
+[ext_resource type="Texture2D" uid="uid://jsltt6c83v5v" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_43.png" id="44_6jqhf"]
+[ext_resource type="Texture2D" uid="uid://bly4khfkpfi3r" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_44.png" id="45_xepju"]
+[ext_resource type="Texture2D" uid="uid://cxaog7w7fjdcv" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_45.png" id="46_3fdq5"]
+[ext_resource type="Texture2D" uid="uid://cbd6c1aqdk2b5" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_46.png" id="47_0xmwa"]
+[ext_resource type="Texture2D" uid="uid://fsrsate8wloo" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_47.png" id="48_y8hll"]
+[ext_resource type="Texture2D" uid="uid://deth3em1uau5n" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_48.png" id="49_0fkf3"]
+[ext_resource type="Texture2D" uid="uid://d3fchhar3bb6c" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_49.png" id="50_xnukx"]
+[ext_resource type="Texture2D" uid="uid://e1re2wo1akts" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_50.png" id="51_lhs2x"]
+[ext_resource type="Texture2D" uid="uid://dkbi2acxxq61w" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_51.png" id="52_llton"]
+[ext_resource type="Texture2D" uid="uid://dq6u2vke5e3le" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_52.png" id="53_colsa"]
+[ext_resource type="Texture2D" uid="uid://dedy54e2h0w23" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_53.png" id="54_vxyfs"]
+[ext_resource type="Texture2D" uid="uid://du1jm3gwq1kgv" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_54.png" id="55_34ymu"]
+[ext_resource type="Texture2D" uid="uid://dbcj8binxb5vc" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_55.png" id="56_2251k"]
+[ext_resource type="Texture2D" uid="uid://cpy3x2gc717t6" path="res://resources/sprites/fx/spells/fire_thing/blue-purple-flaem_56.png" id="57_gico7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bb8cs"]
+resource_local_to_scene = true
+resource_name = "fire"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vajvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5txbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_28768")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ugvcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qeq3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5iu7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fesp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cku0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i7ith")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2maa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jxq37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qf7fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xrp3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_eo5db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_a33ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_t3de4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yu381")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5qye2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4yiwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vsbux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_skje5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_uau4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_l4ctp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pljbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_eui7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xhqub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vy3ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_t2lvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_eux3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7iulb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wbx4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gf7ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ne66n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_boiyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jwpas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pu6xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_bkg2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_sxsa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_f5mcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_sxgrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4fnh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ijtli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_iihuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_6jqhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xepju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_3fdq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_0xmwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_y8hll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_0fkf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_xnukx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_lhs2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_llton")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_colsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_vxyfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_34ymu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2251k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_gico7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bb8cs")
+autoplay = "default"
+frame = 56
+frame_progress = 1.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfkpbldrnv6dn"]
+
+[ext_resource type="Script" path="res://Marker2D.gd" id="1_1pslc"]
+
+[node name="PlayerOrbitMarker" type="Marker2D"]
+script = ExtResource("1_1pslc")

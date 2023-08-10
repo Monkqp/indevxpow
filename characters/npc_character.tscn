@@ -1,0 +1,119 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfbbhgc06smno"]
+
+[ext_resource type="Script" path="res://characters/NpcCharacter.gd" id="1_knv28"]
+[ext_resource type="Shader" path="res://assets/scripts/shaders/flash_white.gdshader" id="1_qykit"]
+[ext_resource type="Curve" uid="uid://bictdo4f7f8xd" path="res://components/curves/knockback_curve.tres" id="2_1u15f"]
+[ext_resource type="Texture2D" uid="uid://rm5n3tlr3wty" path="res://assets/sprites/pink-npc-sprite.png" id="2_rxamp"]
+[ext_resource type="Animation" uid="uid://dto2e368rloxc" path="res://assets/sprites/idle.res" id="3_bnx2v"]
+[ext_resource type="Script" path="res://assets/scripts/Hitbox.gd" id="4_ikgta"]
+[ext_resource type="AudioStream" uid="uid://cyahwki2i8ug5" path="res://assets/sounds/hurt_npc.wav" id="6_xh7h4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jl8o5"]
+resource_local_to_scene = true
+shader = ExtResource("1_qykit")
+shader_parameter/hit_opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agdkq"]
+size = Vector2(5.8, 7)
+
+[sub_resource type="Animation" id="Animation_rhvfk"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qvnm0"]
+resource_name = "dead"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_5qijo"]
+resource_name = "hit"
+length = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/hit_opacity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.075)
+}
+
+[sub_resource type="Animation" id="Animation_l6ox8"]
+resource_name = "move"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_foyn2"]
+_data = {
+"RESET": SubResource("Animation_rhvfk"),
+"dead": SubResource("Animation_qvnm0"),
+"hit": SubResource("Animation_5qijo"),
+"idle": ExtResource("3_bnx2v"),
+"walk": SubResource("Animation_l6ox8")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2cbb"]
+size = Vector2(7, 8)
+
+[node name="NpcCharacter" type="CharacterBody2D"]
+material = SubResource("ShaderMaterial_jl8o5")
+script = ExtResource("1_knv28")
+curve = ExtResource("2_1u15f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+use_parent_material = true
+texture = ExtResource("2_rxamp")
+hframes = 6
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_agdkq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_foyn2")
+}
+
+[node name="TimerState" type="Timer" parent="."]
+autostart = true
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_ikgta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_s2cbb")
+
+[node name="KnockbackTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_xh7h4")
+
+[connection signal="timeout" from="TimerState" to="." method="_on_state_timer_state_timeout"]
+[connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]

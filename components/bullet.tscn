@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmrmkbnbvpd4e"]
+
+[ext_resource type="Script" path="res://assets/scripts/bullet.gd" id="1_ax3ng"]
+[ext_resource type="Texture2D" uid="uid://31t3gf3omurw" path="res://assets/sprites/fx/bullets/default_bullet.png" id="2_on02q"]
+[ext_resource type="Script" path="res://assets/scripts/Hitbox.gd" id="4_lioso"]
+[ext_resource type="Texture2D" uid="uid://wg1mxg8cry73" path="res://assets/sprites/fx/light.png" id="60_l6g3f"]
+
+[sub_resource type="Animation" id="Animation_4hsth"]
+resource_name = "new_animation"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8x2si"]
+_data = {
+"new_animation": SubResource("Animation_4hsth")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7h0nj"]
+radius = 3.16228
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pv8g"]
+size = Vector2(1, 1)
+
+[node name="Bullet" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ax3ng")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.179688, 0.179688)
+color = Color(0.615686, 1, 0.996078, 1)
+energy = 0.1
+texture = ExtResource("60_l6g3f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_on02q")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_8x2si")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="BulletHitArea" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("4_lioso")
+isHitbox = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletHitArea"]
+shape = SubResource("CircleShape2D_7h0nj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2pv8g")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="BulletHitArea" to="." method="_on_area_2d_area_entered"]

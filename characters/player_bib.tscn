@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://rvlvyooyeu2f"]
+
+[ext_resource type="Script" path="res://characters/player_bib.gd" id="1_otlrb"]
+[ext_resource type="Texture2D" uid="uid://b7hea32eqxnrw" path="res://assets/sprites/player-sprite.png" id="2_gycuj"]
+[ext_resource type="Animation" uid="uid://dto2e368rloxc" path="res://assets/sprites/idle.res" id="3_yydxp"]
+[ext_resource type="PackedScene" uid="uid://ct6u42pejuu6f" path="res://components/camera_2d.tscn" id="4_fmqhf"]
+[ext_resource type="Script" path="res://assets/scripts/Hitbox.gd" id="5_ndc8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02bhh"]
+size = Vector2(6, 7)
+
+[sub_resource type="Animation" id="Animation_qvnm0"]
+resource_name = "dead"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_l6ox8"]
+resource_name = "move"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_foyn2"]
+_data = {
+"dead": SubResource("Animation_qvnm0"),
+"idle": ExtResource("3_yydxp"),
+"walk": SubResource("Animation_l6ox8")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4jtdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aidx0"]
+size = Vector2(7, 8)
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+script = ExtResource("1_otlrb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gycuj")
+hframes = 6
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.1, 0)
+shape = SubResource("RectangleShape2D_02bhh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_foyn2")
+}
+
+[node name="PlayerInteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerInteractArea"]
+shape = SubResource("CircleShape2D_4jtdw")
+
+[node name="Camera2D" parent="." instance=ExtResource("4_fmqhf")]
+zoom_amount = 1.2
+zoom_modifier = 0.2
+interpolate_val = 12
+radius = 1.0
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_ndc8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0.1, 0)
+shape = SubResource("RectangleShape2D_aidx0")
+
+[node name="KnockbackTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]

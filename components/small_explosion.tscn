@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://rsdovfjhr1js"]
+
+[ext_resource type="Script" path="res://assets/scripts/small_explosion.gd" id="1_ekura"]
+[ext_resource type="AudioStream" uid="uid://bebuhbw5p4pyu" path="res://assets/sounds/small_explosion.wav" id="2_a6xfh"]
+
+[sub_resource type="Gradient" id="Gradient_15h32"]
+offsets = PackedFloat32Array(0.0706806, 0.782723)
+colors = PackedColorArray(1, 0.935952, 0.362431, 1, 1, 0.266839, 0.147041, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+emitting = false
+lifetime = 0.1
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.77
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 51.4
+initial_velocity_max = 74.77
+linear_accel_min = 34.58
+linear_accel_max = 34.58
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+split_scale = true
+scale_curve_x = null
+scale_curve_y = null
+color_ramp = SubResource("Gradient_15h32")
+script = ExtResource("1_ekura")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_a6xfh")
+volume_db = -15.0
+pitch_scale = 0.75
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

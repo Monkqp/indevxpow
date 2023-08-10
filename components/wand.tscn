@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdsej2s7wc5pv"]
+
+[ext_resource type="Script" path="res://components/wand.gd" id="1_08312"]
+[ext_resource type="Texture2D" uid="uid://bi28m667qltqr" path="res://assets/sprites/wand_thing.png" id="2_pifnl"]
+[ext_resource type="AudioStream" uid="uid://keuvxapj5uwt" path="res://assets/sounds/9mm_shot.wav" id="3_ba08e"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_08312")
+cooldownTime = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pifnl")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ba08e")
+volume_db = -19.788
+pitch_scale = 1.11
